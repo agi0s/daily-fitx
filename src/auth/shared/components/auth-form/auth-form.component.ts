@@ -22,6 +22,7 @@ import { FormGroup, FormBuilder, Validators }from '@angular/forms';
             Password is required
         </div>
         <ng-content select=".error"></ng-content>
+        <ng-content select=".success"></ng-content>
         
         <div class="auth-form__action">
             <ng-content select="button"></ng-content>

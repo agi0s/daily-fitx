@@ -1,6 +1,11 @@
 <div>
-  Hello, {{title}}!
+  <app-header [user]="user$ | async"
+              (logout)="logout()">
+  </app-header>
+  <app-nav *ngIf="(user$ | async)?.authenticated">
+  </app-nav>
   <div class="wrapper">
-    <router-outlet></router-outlet>
+    <router-outlet>
+    </router-outlet>
   </div>
 </div>
