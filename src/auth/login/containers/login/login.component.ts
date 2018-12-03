@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FormGroup } from '@angular/forms';
 import { AuthService } from '../../../shared/services/auth/auth.service';
 import { Router } from '@angular/router';
@@ -32,5 +32,4 @@ export class LoginComponent {
             .then( _ => this.router.navigate(['/']))
             .catch( err => this.error = err.message );
     }
-
 }
